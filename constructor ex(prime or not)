@@ -1,0 +1,40 @@
+#include<iostream>
+using namespace std;
+
+class prime{
+     protected:
+     int k,i,a;
+     public:
+     prime(int x){
+          a=x;
+          k=1;
+          for(i=2;i<a/2;i++){
+           if(a%i==0){
+                
+               k=0; 
+               break;
+           
+                
+           }
+           else{
+                k=1;
+           }
+               
+          }
+     }
+     void show(){
+          if(k==1)
+          cout<<a<<"Prime";
+          else
+          cout<<a<<" "<<"Not Prime";
+     }
+};
+int main(){
+     
+  int a;
+  cout<<"Enter a number";
+  cin>>a;
+  prime p(a);
+  p.show();
+  return 0;
+}
